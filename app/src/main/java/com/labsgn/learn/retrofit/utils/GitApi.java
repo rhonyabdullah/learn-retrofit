@@ -2,7 +2,7 @@ package com.labsgn.learn.retrofit.utils;
 
 import com.labsgn.learn.retrofit.model.GitModel;
 
-import retrofit2.Callback;
+import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
 
@@ -15,5 +15,6 @@ public interface GitApi {
      * user : String yang diambil dari textField
      */
     @GET("/users/{user}")
-    void getUserDetail(@Path("user") String user, Callback<GitModel> response);
+    Call<GitModel> getUser(@Path("user") String username);
+
 }

@@ -129,11 +129,16 @@ public class GitModel {
     @Expose
     private String updatedAt;
 
-    private static GitModel Instance = new GitModel();
+    /*
+    private static GitModel Instance;
 
     public static GitModel getInstance(){
+        if (Instance != null){
+            Instance = new GitModel();
+        }
         return  Instance;
     }
+    */
 
     /**
      * @return The login
